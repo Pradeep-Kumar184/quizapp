@@ -1,6 +1,7 @@
 import express from "express";
 import {
   createQuizController,
+  deleteQuiz,
   getAllQuizController,
   getQuizByDifficulty,
   getSingleQuizController,
@@ -18,4 +19,5 @@ router.get(
   requireSignIn,
   getQuizByDifficulty
 );
+router.delete("/deleteQuiz/:id", requireSignIn, isAdmin, deleteQuiz);
 export default router;

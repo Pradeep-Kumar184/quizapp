@@ -140,3 +140,21 @@ export const getQuizByDifficulty = async (req, res) => {
     });
   }
 };
+// delete quiz
+export const deleteQuiz = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const quiz = await quizModel.findByIdAndDelete(id);
+    return res.status(200).send({
+      success: true,
+      message: "Quiz delete successfully",
+      quiz,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      success: false,
+      message: "Error in delete quiz",
+      error,
+    });
+  }
+};

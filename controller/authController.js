@@ -187,3 +187,20 @@ export const updateProfileController = async (req, res) => {
     });
   }
 };
+// get users
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await userModel.find({});
+    return res.status(200).send({
+      success: true,
+      message: "users get successfully",
+      users,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      success: false,
+      message: "Error in get all user profile",
+      error,
+    });
+  }
+};
