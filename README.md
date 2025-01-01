@@ -18,6 +18,13 @@ This is a backend application for a quiz app where users can select quiz by diff
 - MongoDB
 - JSON Web Tokens (JWT) for authentication
 
+  ## Deployment
+
+The application is deployed and can be accessed at the following link:
+
+[Deployed Application](https://quizapp-xwng.onrender.com)
+
+
 ## Installation
 
 1. Clone the repository:
